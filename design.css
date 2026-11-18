@@ -77,18 +77,30 @@ body{
     width: 100%;
     max-width: 450px;
 }
-.products{
+/* CORRIGÉ : le HTML utilise la classe "Produits" (majuscule) */
+.products,
+.Produits{
     padding: 60px 0px;
 }
+/* CORRIGÉ : ces conteneurs contiennent un titre + une grille.
+   En flex (règle .container), ils se plaçaient côte à côte. */
+.Produits .container,
+.shop-products .container,
+.shop-header .container,
+.contact-header .container{
+    display: block;
+}
 .sect-title{
-    align-items: center ;
+    text-align: center;
     font-size: 32px;
     margin-bottom: 40px;
 }
 .prod-grid{
     display: grid;
-    grid-template-columns: repeat(3,1 fr);
+    /* CORRIGÉ : "1 fr" (avec espace) était invalide, la grille ne marchait pas */
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    width: 100%;
 }
 .prod-card img{
     width: 100%;
@@ -102,7 +114,8 @@ body{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
-.prod-card :hover{
+/* CORRIGÉ : ".prod-card :hover" (avec espace) visait les enfants, pas la carte */
+.prod-card:hover{
     transform: translateY(-5px);
 }
 .prod-card h3{
@@ -165,7 +178,8 @@ body{
         text-align: center;
     }
 
-    .product-grid {
+    /* CORRIGÉ : la classe s'appelle .prod-grid, pas .product-grid */
+    .prod-grid {
         grid-template-columns: 1fr;
     }
 
@@ -222,7 +236,8 @@ body{
     border:  1px solid #ccc;
     border-radius: 5px;
 }
-.contact-form{
+/* CORRIGÉ : ces réglages étaient destinés au champ message, pas au formulaire */
+.contact-form textarea{
     min-height: 120px;
     resize: vertical;
 }
