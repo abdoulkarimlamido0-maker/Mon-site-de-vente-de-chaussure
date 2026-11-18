@@ -1,99 +1,113 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <title>Chaussures Modernes</title>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="design.css">
-    </head>
-    <body>
-        <header>
-            <div class="container">
-                <div class="Logo">
-                    <h1>Magasin de chaussure</h1>
-                </div>
-                <nav class="nav">
-                    <ul>
-                        <li><a href="index.html">Acceuil</a></li>
-                        <li><a href="Shop.html">Boutique</a></li>
-                        <li><a href="Contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-                <div class="cart">
-                    <span>🛒</span>
-                    <span class="cartcount">2</span>
-                </div>
-            </div>
-        </header>
-        <main>
-        <section class="hero">
-            <div class="container hero-content">
-                <div class="hero-text">
-                    <h2>Des chaussures stylés pour tout les jours</h2>
-                    <p>
-                        
-                        Découvrez notre collection de chaussure moderne,
-                        confortable et adapté a tout les styles.
+<head>
+<title>Chaussures Modernes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="design.css">
+<link rel="stylesheet" href="extras.css">
+</head>
 
-                    </p>
-                    <a href="Shop.html" class="btn">Voir la collection</a>
-                </div>
+<body>
 
-                <div class="hero-image">
-                    <img src="basket.png" alt="Chaussure-modernes">
-                </div>
-            </div>
-        </section>
-        <section class="Produits">
-            <div class="container">
-                <h2 class="sect-title">Produits populaires</h2>
-                <div class="prod-grid">
-                    <div class="prod-card">
-                        <img src="urb.png">
-                        <h3>Basket Urbaine</h3>
-                        <p class="price">299 DH</p>
-                        <a href="#" class="btn btn-small">Ajouter au panier.</a>
-                    </div>
-                    <div class="prod-card">
-                        <img src="class.png">
-                        <h3>chaussure classique</h3>
-                        <p class="price">399 DH</p>
-                        <a href="#" class="btn btn-small">Ajouter au panier.</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="advantages">
-            <div class="container">
-                
-                <div class="advantage">
-                    <span class="icon">🚚</span>
-                    <h3>Livraison rapide</h3>
-                    <p>Partout au Maroc en 24 à 48h</p>
-                </div>
-                <div class="advantage">
-                    <span class="icon">⭐</span>
-                    <h3>Qualité garantie</h3>
-                    <p>Des chaussures confortables et durables.</p>
-                </div>
-                <div class="advantage">
-                    <span class="icon">💰</span>
-                    <h3>Paiement à la livraison</h3>
-                    <p>Payez seulement à la réception.</p>
-                </div>
-            </div>
-        </section>
-        <section class="cta">
-            <div class="container">
-                <h2>Prêt à trouver la paire parfaite ?</h2>
-                <a href="contact.html" class="btn">Nous contacter</a>
-            </div>
-        </section>
-        </main>
-        <footer class="footer">
-            <div class="container">
-                <p>© 2026 ShoeStore — Tous droits réservés</p>
-            </div>
-        </footer>
+<header>
+<div class="container">
 
-    </body>
+<div class="Logo">
+<h1>Magasin de chaussure</h1>
+</div>
+
+<nav class="nav">
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="Shop.html">Boutique</a></li>
+<li><a href="Contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<div class="cart">
+<span>🛒</span>
+<span class="cartcount">0</span>
+</div>
+
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container hero-content">
+
+<div class="hero-text">
+<h2>Des chaussures stylées pour tous les jours</h2>
+<p>
+Découvrez notre collection de chaussures modernes,
+confortables et adaptées à tous les styles.
+</p>
+<a href="Shop.html" class="btn">Voir la collection</a>
+</div>
+
+<div class="hero-image">
+<img src="basket.png" alt="Chaussures modernes">
+</div>
+
+</div>
+</section>
+
+<section class="Produits">
+<div class="container">
+<h2 class="sect-title">Produits populaires</h2>
+
+<!-- Les cartes sont générées par app.js à partir du catalogue -->
+<div class="prod-grid" id="liste-produits"></div>
+
+</div>
+</section>
+
+<section class="advantages">
+<div class="container">
+
+<div class="advantage">
+<span class="icon">🚚</span>
+<h3>Livraison rapide</h3>
+<p>Partout au Maroc en 24 à 48h</p>
+</div>
+
+<div class="advantage">
+<span class="icon">⭐</span>
+<h3>Qualité garantie</h3>
+<p>Des chaussures confortables et durables.</p>
+</div>
+
+<div class="advantage">
+<span class="icon">💰</span>
+<h3>Paiement à la livraison</h3>
+<p>Payez seulement à la réception.</p>
+</div>
+
+</div>
+</section>
+
+<section class="cta">
+<div class="container">
+<h2>Prêt à trouver la paire parfaite ?</h2>
+<a href="Contact.html" class="btn">Nous contacter</a>
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="container">
+<p>© 2026 Chaussures Modernes — Tous droits réservés</p>
+</div>
+</footer>
+
+<script src="app.js"></script>
+<script>
+  // Accueil : les 2 produits populaires (ids 1 et 2)
+  afficherProduits("liste-produits", [1, 2], "vignette");
+</script>
+
+</body>
 </html>
