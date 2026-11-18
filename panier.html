@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Panier - Chaussures Modernes</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="design.css">
+<link rel="stylesheet" href="extras.css">
+</head>
+
+<body>
+
+<header>
+<div class="container">
+
+<div class="Logo">
+<h1>Magasin de chaussure</h1>
+</div>
+
+<nav class="nav">
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="Shop.html">Boutique</a></li>
+<li><a href="Contact.html">Contact</a></li>
+</ul>
+</nav>
+
+<div class="cart">
+<span>🛒</span>
+<span class="cartcount">0</span>
+</div>
+
+</div>
+</header>
+
+<main>
+
+<section class="shop-header">
+<div class="container">
+<h2>Mon panier</h2>
+</div>
+</section>
+
+<section class="panier">
+<div class="container">
+
+<p id="panier-vide" hidden>
+Votre panier est vide. <a href="Shop.html">Voir la boutique</a>
+</p>
+
+<div id="panier-contenu" hidden>
+
+<div class="table-wrap">
+<table class="table-panier">
+<thead>
+<tr>
+<th>Produit</th>
+<th>Pointure</th>
+<th>Quantité</th>
+<th>Prix</th>
+<th><span class="sr-only">Actions</span></th>
+</tr>
+</thead>
+<tbody id="lignes-panier"></tbody>
+</table>
+</div>
+
+<p class="total-ligne">Total : <strong id="total">0 DH</strong></p>
+
+<form id="form-commande" class="form-commande" novalidate>
+<h3>Vos informations de livraison</h3>
+
+<label for="nom">Nom complet</label>
+<input type="text" id="nom" name="nom" autocomplete="name" required>
+
+<label for="tel">Téléphone</label>
+<input type="tel" id="tel" name="tel" autocomplete="tel" placeholder="06 12 34 56 78" required>
+
+<label for="ville">Ville</label>
+<input type="text" id="ville" name="ville" autocomplete="address-level2" required>
+
+<label for="adresse">Adresse de livraison</label>
+<textarea id="adresse" name="adresse" autocomplete="street-address" required></textarea>
+
+<fieldset>
+<legend>Mode de paiement</legend>
+<label>
+<input type="radio" name="paiement" value="livraison" checked>
+Paiement à la livraison
+</label>
+<label>
+<input type="radio" name="paiement" value="carte" disabled>
+Carte bancaire (bientôt disponible)
+</label>
+</fieldset>
+
+<p id="erreur-commande" class="erreur" role="alert" hidden></p>
+
+<button type="submit" class="btn">Envoyer ma commande sur WhatsApp</button>
+</form>
+
+</div>
+
+<div id="confirmation" class="confirmation" hidden>
+<h3>Commande prête à être envoyée</h3>
+<p>
+WhatsApp s'est ouvert avec le récapitulatif de votre commande.
+Appuyez sur « Envoyer » pour la valider. Nous vous contactons pour confirmer la livraison.
+</p>
+<p>
+WhatsApp ne s'est pas ouvert ?
+<a id="lien-whatsapp" href="#" target="_blank" rel="noopener">Cliquez ici pour envoyer la commande</a>.
+</p>
+<p><a href="Shop.html" class="btn">Retour à la boutique</a></p>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer class="footer">
+<div class="container">
+<p>© 2026 Chaussures Modernes — Tous droits réservés</p>
+</div>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
