@@ -12,11 +12,7 @@
 
 <header>
 <div class="container">
-
-<div class="Logo">
-<h1>Magasin de chaussure</h1>
-</div>
-
+<div class="Logo"><h1>Chaussures Modernes</h1></div>
 <nav class="nav">
 <ul>
 <li><a href="index.html">Accueil</a></li>
@@ -24,12 +20,7 @@
 <li><a href="Contact.html">Contact</a></li>
 </ul>
 </nav>
-
-<div class="cart">
-<span>🛒</span>
-<span class="cartcount">0</span>
-</div>
-
+<a class="cart" href="panier.html" aria-label="Voir le panier"><span>🛒</span><span class="cartcount">0</span></a>
 </div>
 </header>
 
@@ -37,54 +28,40 @@
 
 <section class="hero">
 <div class="container hero-content">
-
 <div class="hero-text">
-<h2>Des chaussures stylées pour tous les jours</h2>
-<p>
-Découvrez notre collection de chaussures modernes,
-confortables et adaptées à tous les styles.
-</p>
+<h2>Des chaussures <span>stylées</span> pour tous les jours</h2>
+<p>Découvrez notre collection de chaussures modernes, confortables et adaptées à tous les styles.</p>
 <a href="Shop.html" class="btn">Voir la collection</a>
 </div>
-
 <div class="hero-image">
 <img src="basket.png" alt="Chaussures modernes">
 </div>
+</div>
+</section>
 
+<section class="categories">
+<div class="container">
+<a class="chip" href="Shop.html?cat=Baskets">Baskets</a>
+<a class="chip" href="Shop.html?cat=Classiques">Classiques</a>
+<a class="chip" href="Shop.html?cat=Sport">Sport</a>
+<a class="chip" href="Shop.html?cat=Sandales">Sandales</a>
+<a class="chip" href="Shop.html?cat=Bottes">Bottes</a>
 </div>
 </section>
 
 <section class="Produits">
 <div class="container">
 <h2 class="sect-title">Produits populaires</h2>
-
-<!-- Les cartes sont générées par app.js à partir du catalogue -->
 <div class="prod-grid" id="liste-produits"></div>
-
+<p class="centre"><a href="Shop.html" class="btn">Voir toute la boutique</a></p>
 </div>
 </section>
 
 <section class="advantages">
 <div class="container">
-
-<div class="advantage">
-<span class="icon">🚚</span>
-<h3>Livraison rapide</h3>
-<p>Partout au Maroc en 24 à 48h</p>
-</div>
-
-<div class="advantage">
-<span class="icon">⭐</span>
-<h3>Qualité garantie</h3>
-<p>Des chaussures confortables et durables.</p>
-</div>
-
-<div class="advantage">
-<span class="icon">💰</span>
-<h3>Paiement à la livraison</h3>
-<p>Payez seulement à la réception.</p>
-</div>
-
+<div class="advantage"><span class="icon">🚚</span><h3>Livraison rapide</h3><p>Partout au Maroc en 24 à 48h</p></div>
+<div class="advantage"><span class="icon">⭐</span><h3>Qualité garantie</h3><p>Des chaussures confortables et durables.</p></div>
+<div class="advantage"><span class="icon">💰</span><h3>Paiement à la livraison</h3><p>Payez seulement à la réception.</p></div>
 </div>
 </section>
 
@@ -99,14 +76,20 @@ confortables et adaptées à tous les styles.
 
 <footer class="footer">
 <div class="container">
+<ul class="footer-liens">
+<li><a href="index.html">Accueil</a></li>
+<li><a href="Shop.html">Boutique</a></li>
+<li><a href="panier.html">Panier</a></li>
+<li><a href="Contact.html">Contact</a></li>
+</ul>
 <p>© 2026 Chaussures Modernes — Tous droits réservés</p>
 </div>
 </footer>
 
 <script src="app.js"></script>
 <script>
-  // Accueil : les 2 produits populaires (ids 1 et 2)
-  afficherProduits("liste-produits", [1, 2], "vignette");
+  // Accueil : produits marqués "populaire" dans le catalogue
+  afficherProduits("liste-produits", PRODUITS.filter(function (p) { return p.populaire; }), "vignette");
 </script>
 
 </body>
