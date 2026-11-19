@@ -12,11 +12,7 @@
 
 <header>
 <div class="container">
-
-<div class="Logo">
-<h1>Magasin de chaussure</h1>
-</div>
-
+<div class="Logo"><h1>Chaussures Modernes</h1></div>
 <nav class="nav">
 <ul>
 <li><a href="index.html">Accueil</a></li>
@@ -24,12 +20,7 @@
 <li><a href="Contact.html">Contact</a></li>
 </ul>
 </nav>
-
-<div class="cart">
-<span>🛒</span>
-<span class="cartcount">0</span>
-</div>
-
+<a class="cart" href="panier.html" aria-label="Voir le panier"><span>🛒</span><span class="cartcount">0</span></a>
 </div>
 </header>
 
@@ -45,7 +36,19 @@
 <section class="shop-products">
 <div class="container">
 
-<!-- Les cartes sont générées par app.js à partir du catalogue -->
+<div class="toolbar">
+<div id="filtres"></div>
+<div class="toolbar-droite">
+<span id="compteur"></span>
+<label for="tri" class="sr-only">Trier les produits</label>
+<select id="tri">
+<option value="">Trier par</option>
+<option value="asc">Prix croissant</option>
+<option value="desc">Prix décroissant</option>
+</select>
+</div>
+</div>
+
 <div class="prod-grid" id="liste-produits"></div>
 
 </div>
@@ -53,11 +56,19 @@
 
 </main>
 
+<footer class="footer">
+<div class="container">
+<ul class="footer-liens">
+<li><a href="index.html">Accueil</a></li>
+<li><a href="Shop.html">Boutique</a></li>
+<li><a href="panier.html">Panier</a></li>
+<li><a href="Contact.html">Contact</a></li>
+</ul>
+<p>© 2026 Chaussures Modernes — Tous droits réservés</p>
+</div>
+</footer>
+
 <script src="app.js"></script>
-<script>
-  // Boutique : tous les produits du catalogue
-  afficherProduits("liste-produits", null, "image");
-</script>
 
 </body>
 </html>
